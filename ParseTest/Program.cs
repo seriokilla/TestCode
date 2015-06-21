@@ -6,7 +6,7 @@ namespace ParseTest
     {
         public static void Main(string[] args)
         {
-            var d = Convert("1234567.6767890");
+            var d = Convert("12345.67890");
             Console.WriteLine(d);
         }
 
