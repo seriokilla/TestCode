@@ -7,7 +7,7 @@ namespace TreeTest
         public static void Main(string[] args)
         {
             var head = BuildTree();
-            TraverseInOrder(head);
+            PrintTraverseInOrder(head);
         }
 
         
@@ -28,17 +28,16 @@ namespace TreeTest
             return head;
         }
 
-        public static void TraverseInOrder(TreeNode<int> head)
+        public static void PrintTraverseInOrder(TreeNode<int> head)
         {
             if (head == null)
                 return;
 
-            TraverseInOrder(head.Left);
+            PrintTraverseInOrder(head.Left);
             Console.WriteLine(head.Item);
-            TraverseInOrder(head.Right);
+            PrintTraverseInOrder(head.Right);
         }
     }
-
 
     public class TreeNode<T>
     {
@@ -48,7 +47,4 @@ namespace TreeTest
 
         public T Item;
     }
-
-
-
 }
