@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+	<title>Sample AngularJS project using Visual Studio</title>
+	<script src="../Scripts/angular.js"></script>
+	<script src="../Scripts/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/homeController.js"></script>
+	<script src="controllers/aboutController.js"></script>
+</head>
+<body>
+	<div>
+		<a href="#/">Home</a>
+		<a href="#/about">About</a>
+	</div>
+<br/>
+<br/>
+
+<div ng-controller="mainController">
+	<table class="table-striped">
+		<thead>
+		<tr>
+			<td>Fruit</td>
+			<td>Color</td>			
+		</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="fruit in fruits">
+				<td>{{fruit.name}}</td>
+				<td>{{fruit.color}}</td>
+				<td><button ng-click="removeFruit(fruit)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+
+</body>
+</html>
